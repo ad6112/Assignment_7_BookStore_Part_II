@@ -3,7 +3,7 @@
 {% block container %}
 <main>
 
-    <!-- Left Category Navigation -->
+    <!-- left cat nav -->
     <section id="catLeft">
         {% for cat in categories %}
             <p class="notSelectedCategory">
@@ -14,19 +14,19 @@
         {% endfor %}
     </section>
 
-    <!-- Book Detail Content -->
+    <!-- book detail -->
     <section id="catRight" style="display:flex; justify-content:center;">
         <div class="book" style="width:650px; padding:20px; display:flex;">
 
-            <!-- Book Image -->
+            <!-- book img -->
             <div>
-                <img 
+                <img
                     src="{{ url_for('static', filename='images/books/' + book.image) }}"
                     alt="{{ book.title }}"
                     style="width:250px;">
             </div>
 
-            <!-- Book Detail Box -->
+            <!-- book info -->
             <div class="bookDetailBox" style="margin-left:30px; font-size:1em;">
 
                 <h1 style="margin-bottom:10px;">{{ book.title }}</h1>
@@ -34,7 +34,7 @@
                 <p class="bookDetail"><strong>by {{ book.author }}</strong></p>
                 <p class="bookDetail">ISBN: {{ book.isbn }}</p>
 
-                <!-- Category NAME -->
+                <!-- category -->
                 <p class="bookDetail">Category: {{ book.categoryName }}</p>
 
                 <p class="bookPrice" style="margin-top:15px;">
@@ -49,10 +49,10 @@
 
                 <br>
 
-                <!-- Back button -->
+                <!-- back btn -->
                 <a href="{{ url_for('category', categoryId=book.categoryId) }}"
                    class="actionButton"
-                   style="width:auto; padding:0 10px; background-color:#00aacc; margin-top:20px;">
+                   style="width:auto; padding:0 10px; margin-top:20px;">
                     Back to Category
                 </a>
             </div>

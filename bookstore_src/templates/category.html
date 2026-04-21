@@ -18,13 +18,11 @@
 
     <section id="catRight">
         {% if searchTerm %}
-            <p style="margin:20px;">Search results for "{{ searchTerm }}"</p>
+            <p class="searchBanner">Search results for <strong>"{{ searchTerm }}"</strong></p>
         {% endif %}
 
         {% if nothingFound %}
-            <p style="color:#dd1d5e; font-weight:bold; margin:20px; font-size:1.2em;">
-                No results found for "{{ searchTerm }}"
-            </p>
+            <p class="noResults">No results found for "{{ searchTerm }}"</p>
         {% endif %}
 
         {% for book in books %}

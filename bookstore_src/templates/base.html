@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Treble Clef</title>
+    <title>Ananya's Musical Bookstore</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
   </head>
@@ -9,7 +9,7 @@
     <header>
       <div id="leftHeader">
         <a href="{{ url_for('home') }}">
-          <img src="{{ url_for('static', filename='images/misc/treble-clef-logo.jpg') }}" alt="Treble Clef logo">
+          <img src="{{ url_for('static', filename='images/misc/ananya-logo.png') }}" alt="Ananya's Musical Bookstore logo">
         </a>
       </div>
 
@@ -41,9 +41,12 @@
         </div>
         <div id="cartCount">1 item</div>
         <div class="loginButton"><a href="#">login</a></div>
-         <div class="loginButton">
-        <a href="{{ url_for('add_book') }}">Add Book</a>
-    </div>
+        <div class="loginButton">
+          <a href="{{ url_for('read_now') }}">Read Now</a>
+        </div>
+        <div class="loginButton">
+          <a href="{{ url_for('add_book') }}">Add Book</a>
+        </div>
 
       </div>
 
@@ -54,7 +57,7 @@
 
     <footer>
       <div id="footerLeft">
-        <p>The Treble Clef</p>
+        <p>Ananya's Musical Bookstore</p>
         <p>&copy;</p>
         <a href="#">Contact Us</a>
         <a href="#">Directions</a>
