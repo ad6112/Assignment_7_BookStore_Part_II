@@ -30,7 +30,7 @@
 
                 <a href="{{ url_for('category', categoryId=category.categoryId) }}">
                     <img
-                        src="{{ url_for('static', filename='images/categories/' + category.categoryName|lower|replace(' ', '-') + '-category.jpg') }}"
+                        src="{{ url_for('static', filename='images/categories/' + category.categoryImage) }}"
                         alt="{{ category.categoryName }}"
                     >
                 </a>
